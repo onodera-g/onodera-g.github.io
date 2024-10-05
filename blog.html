@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+        }
+        .blog-list {
+            display: block;
+        }
+        .blog-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .blog-item img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .blog-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .blog-item a {
+            text-decoration: none;
+            color: black;
+        }
+        .blog-item a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>\(0n0)dera.com</h1>
+</header>
+
+<nav>
+    <a href="index.html">ホーム</a>
+    <a href="about.html">制作物</a>
+    <a href="blog.html">ブログ</a>
+</nav>
+
+<section>
+    <h2>ブログ記事一覧</h2>
+    <div class="blog-list">
+        <div class="blog-item">
+            <a href="article/article1/article1.html">
+                <img src="article/article1/article1_thumbnail.jpg" alt="記事1のサムネイル">
+            </a>
+            <div>
+                <a href="article/article1/article1.html">
+                    <h3>ブログ記事タイトル1</h3>
+                </a>
+            </div>
+        </div>
+        <div class="blog-item">
+            <a href="article/article2/article2.html">
+                <img src="article/article2/article2_thumbnail.jpg" alt="記事2のサムネイル">
+            </a>
+            <div>
+                <a href="article/article2/article2.html">
+                    <h3>ブログ記事タイトル2</h3>
+                </a>
+            </div>
+        </div>
+        <div class="blog-item">
+            <a href="article/article3/article3.html">
+                <img src="article/article3/article3_thumbnail.jpg" alt="記事3のサムネイル">
+            </a>
+            <div>
+                <a href="article/article3/article3.html">
+                    <h3>ブログ記事タイトル3</h3>
+                </a>
+            </div>
+        </div>
+        <!-- 新しい記事をここに追加 -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 私の名前</p>
+</footer>
+
+</body>
+</html>
