@@ -1,1 +1,0 @@
-# onodera-g.github.io
