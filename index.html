@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿部 寛のホームページ風</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #ffffff;
+    }
+
+    #body {
+      background-repeat: repeat;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      width: 180px;
+      background-color: #e7e7ff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #0000cc;
+      font-weight: bold;
+    }
+
+    .sidebar a::before {
+      content: '●';
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 12px;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 960px;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .top-block {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .profile-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 350px;
+      margin-right: 0;
+    }
+
+    .profile-info {
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .news-section {
+      font-size: 14px;
+      line-height: 1.8;
+      flex: 1 1 350px;
+      margin-left: 0;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .main-content {
+        justify-content: flex-start;
+      }
+
+      .content-wrapper {
+        padding: 0 10px;
+      }
+
+      .top-block {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .profile-block,
+      .news-section {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body id="body">
+  <script>
+    var bg = document.createElement('canvas');
+    bg.width = 400;
+    bg.height = 100;
+    var context = bg.getContext('2d');
+    context.fillStyle = '#FFFFFF';
+    context.fillRect(0, 0, 400, 100);
+    context.fillStyle = '#A9F5D0';
+    context.font = '48px Monotype Corsiva';
+    context.fillText('ABE Hiroshi', 10, 50);
+    var img_png_src = bg.toDataURL();
+    document.getElementById('body').style.backgroundImage = 'url(' + img_png_src + ')';
+  </script>
+
+  <div class="layout">
+    <div class="sidebar">
+      <a href="#">トップ</a>
+      <a href="#">映画出演</a>
+      <a href="#">ドラマ出演</a>
+      <a href="#">舞台出演</a>
+      <a href="#">写真集</a>
+      <a href="#">出版本</a>
+      <a href="#">管理者</a>
+    </div>
+
+    <div class="main-content">
+      <div class="content-wrapper">
+        <h1>阿部 寛のホームページ</h1>
+
+        <div class="top-block">
+          <div class="profile-block">
+            <img src="images/profile.jpg" width="350" height="414" alt="プロフィール画像">
+            <div class="profile-info">
+              阿部 寛（あべ ひろし）<br>
+              Hiroshi Abe<br>
+              生年月日 1964年6月22日<br>
+              血液型 A型<br>
+              <a href="#">プロフィール</a><br><br>
+              If you have any enquiries regarding my TV drama or film,<br>
+              or would like to make an enquiry concerning future projects,<br>
+              please do not hesitate to contact me through the following email address.<br><br>
+              mail: <a href="mailto:info@office-2023.co.jp">info@office-2023.co.jp</a><br><br>
+              所属：株式会社オフィス<br>
+              107-0052<br>
+              東京都港区赤坂5-5-29<br>
+              赤坂共和五番館3F-301<br>
+              TEL: +81-3-6434-7140<br>
+              FAX: +81-3-6434-7141
+            </div>
+          </div>
+
+          <div class="news-section">
+            <b>★★★　最新情報　★★★</b>
+            <hr>
+            <b>■映画</b><br>
+            <a href="#">『俺ではない炎』</a> <span style="color:red; font-weight:bold;">New!</span><br>
+            2025年9月26日公開<br>
+            <a href="#">『キャンドルスティック』</a><br>
+            2025年7月4日公開
+            <hr>
+            <b>■TV</b><br>
+            日曜劇場『<a href="#">キャスター</a>』<br>
+            2025年4月スタート 毎週日曜よる9時～
+            <hr>
+            <b>
+              当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます。<br>
+              また、まとめサイト等への引用を厳禁致します。<br>
+              お問い合わせはメールでご連絡をお願い致します。
+            </b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
